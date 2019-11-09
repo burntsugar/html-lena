@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Raleway:500i&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-the-pink: #FF69B4;
+            --opt-text-love-letters-size: 11em;
+            --opt-text-you-letters-size: 3em;
+            --opt-img-hero: 627px;
+            --font-page-main-main: 'Alfa Slab One', cursive;
+            --font-page-main-content: 'Raleway', sans-serif;
+        }
+
+        * {
+            border: 0px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background-color: #e68db9;
+        }
+
+        #wrapper {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 20vh auto 2vh  50vh;
+            grid-template-columns: 1fr minmax(var(--opt-img-hero), var(--opt-img-hero)) 1fr
+        }
+
+        #love-left {
+            background-color: var(--color-the-pink);
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+
+        #love-middle {
+            background-color: var(--color-the-pink);
+            grid-column-start: 2;
+            grid-row-start: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        #love-right {
+            background-color: var(--color-the-pink);
+            grid-column-start: 3;
+            grid-row-start: 1;
+        }
+
+        .box {
+            background-color: var(--color-the-pink);
+        }
+
+        #jimg-right {
+            background-color: var(--color-the-pink);
+            grid-column-start: 3;
+            grid-row-start: 4;
+        }
+
+        #jimg {
+            grid-column-start: 2;
+            grid-column-end: 2;
+            grid-row-start: 4;
+            background-image: url("img/hero.jpeg");
+        }
+
+        #jimg-left {
+            background-color: var(--color-the-pink);
+            grid-column-start: 1;
+            grid-row-start: 4;
+        }
+
+        .letters {
+            font-size: var(--opt-text-love-letters-size);
+            line-height: 0.8;
+            font-family: var(--font-page-main-main);
+        }
+
+        #middle-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: var(--color-the-pink);
+        }
+
+        #mbox1 {
+            width: 40%;
+            font-size: var(--opt-text-you-letters-size);
+            line-height: 0.8;
+            font-family: var(--font-page-main-main);
+        }
+
+        #mbox2 {
+            width: 30%;
+            font-size: 4vh;
+            line-height: 0.8;
+            font-family: var(--font-page-main);
+            text-align: right;
+        }
+
+        #mbox3 {
+            width: 30%;
+            font-size: 5vh;
+            line-height: 0.8;
+            font-family: var(--font-page-main);
+            text-align: right;
+            font-weight: bold;
+        }
+        #text-left {
+            background-color: var(--color-the-pink);
+            grid-column-start: 1;
+            grid-row-start: 3;
+        }
+        #text-middle {
+            box-sizing:border-box;
+            display:flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-end;
+            background-color: var(--color-the-pink);
+            grid-column-start: 2;
+            grid-row-start: 3;
+            font-family: var(--font-page-main-content);
+            padding-bottom:5px;
+        }
+        #text-right {
+            background-color: var(--color-the-pink);
+            grid-column-start: 3;
+            grid-row-start: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="love-left"></div>
+        <div id="love-middle">
+            <h1 class="letters">L</h1>
+            <h1 class="letters">O</h1>
+            <h1 class="letters">V</h1>
+            <h1 class="letters">E</h1>
+        </div>
+        <div id="love-right"></div>
+        <div class="box"></div>
+        <div id="middle-box">
+            <div id="mbox1">YOU</div>
+            <div id="mbox2">あなたは踊ることができず、緊張を保つことができません</div>
+            <div id="mbox3">あなたは踊ることができず、緊張を保つことができません</div>
+
+        </div>
+        <div class="box"></div>
+        <div id="text-left"></div>
+        <div id="text-middle"><p>A study of grid, fr, minmax and flex.</p></div>
+        <div id="text-right"></div>
+        <div id="jimg-left"></div>
+        <div id="jimg"></div>
+        <div id="jimg-right"></div>
+    </div>
+
+</body>
+
+</html>
